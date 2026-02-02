@@ -1,0 +1,14 @@
+# Sistem
+Thumbs.db
+.DS_Store
+
+# Laragon
+/.laragon/
+
+# Environment
+.env
+.env.*
+
+# Cache / dependency
+node_modules/
+vendor/
