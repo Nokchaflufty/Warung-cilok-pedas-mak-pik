@@ -5,40 +5,30 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login Admin - Warung Cilok Pedas Mak Pik</title>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="../assets/css/login.css">
 </head>
 <body>
-    <div class="login-container">
-        <div class="login-card">
-            <h2>Login Admin</h2>
-            <p>Warung Cilok Pedas Mak Pik</p>
-
-            <?php if (!empty($error_message)): ?>
-                <div class="error-message">
-                    <i class="fas fa-exclamation-triangle"></i> <?php echo htmlspecialchars($error_message); ?>
-                </div>
-            <?php endif; ?>
-
-            <form action="login.php" method="POST">
-                <div class="input-group">
-                    <label for="username">Username</label>
-                    <div class="input-wrapper">
-                        <i class="fas fa-user icon"></i>
-                        <input type="text" id="username" name="username" placeholder="Masukkan username" required>
+    <div class="container-fluid d-flex align-items-center justify-content-center min-vh-100">
+        <div class="card login-card shadow-lg">
+            <div class="card-body p-4">
+                <h2 class="card-title text-center mb-4 fw-bold">Login Admin</h2>
+                <p class="text-center text-muted mb-4">Warung Cilok Pedas Mak Pik</p>
+                <form>
+                    <div class="mb-3">
+                        <label for="username" class="form-label fw-semibold">Username</label>
+                        <input type="text" class="form-control" id="username" name="username" placeholder="Masukkan username Anda" required>
                     </div>
-                </div>
-                
-                <div class="input-group">
-                    <label for="password">Password</label>
-                    <div class="input-wrapper">
-                        <i class="fas fa-lock icon"></i>
-                        <input type="password" id="password" name="password" placeholder="Masukkan password" required>
+                    <div class="mb-4">
+                        <label for="password" class="form-label fw-semibold">Password</label>
+                        <input type="password" class="form-control" id="password" name="password" placeholder="Masukkan password Anda" required>
                     </div>
+                    <button type="submit" class="btn btn-primary w-100 fw-semibold mb-3">Login</button>
+                </form>
+                <div class="text-center">
+                    <a href="register.html" class="btn btn-secondary w-100 fw-semibold">Register</a>
                 </div>
-                
-                <button type="submit" class="login-btn">Login</button>
-            </form>
+            </div>
         </div>
     </div>
 </body>
