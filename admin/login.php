@@ -1,45 +1,44 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="id">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login Admin - Warung Cilok Pedas Mak Pik</title>
-    <link rel="stylesheet" href="../assets/css/admin.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="../assets/css/login.css">
 </head>
 <body>
-    <div class="login-wrapper">
-        <div class="login container">
-            <div class="login-logo">
-                🌶️
-            </div>
+    <div class="login-container">
+        <div class="login-card">
+            <h2>Login Admin</h2>
+            <p>Warung Cilok Pedas Mak Pik</p>
 
-            <div class="login-header">
-                <h1>Login Admin</h1>
-                <p>Masuk untuk mengelola Warung Cilok Pedas Mak Pik</p>
-            </div>
+            <?php if (!empty($error_message)): ?>
+                <div class="error-message">
+                    <i class="fas fa-exclamation-triangle"></i> <?php echo htmlspecialchars($error_message); ?>
+                </div>
+            <?php endif; ?>
 
-            <form action="proses-login.php" method="POST">
-                <div class="form-group">
+            <form action="login.php" method="POST">
+                <div class="input-group">
                     <label for="username">Username</label>
-                    <input type="text" id="username" name="username" class="form-control" placeholder="Masukan Username" required>
+                    <div class="input-wrapper">
+                        <i class="fas fa-user icon"></i>
+                        <input type="text" id="username" name="username" placeholder="Masukkan username" required>
+                    </div>
                 </div>
-
-                <div class="form-group">
+                
+                <div class="input-group">
                     <label for="password">Password</label>
-                    <input type="password" id="password" name="password" class="form-control" placeholder="Masukan Password" required>
+                    <div class="input-wrapper">
+                        <i class="fas fa-lock icon"></i>
+                        <input type="password" id="password" name="password" placeholder="Masukkan password" required>
+                    </div>
                 </div>
-
-                <div class="remember-me">
-                    <input type="checkbox" id="remember" name="remember">
-                    <label for="remember">Ingat Saya</label>
-                </div>
-
-                <button type="submit" class="btn-login">Masuk</button>
+                
+                <button type="submit" class="login-btn">Login</button>
             </form>
-
-            <div class="back-to-home">
-                <a href="../index.php">← Kembali ke Halaman Utama</a>
-            </div>
         </div>
     </div>
 </body>
