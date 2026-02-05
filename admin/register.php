@@ -3,11 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login Admin - Warung Cilok Pedas Mak Pik</title>
+    <title>Register Admin - Warung Cilok Pedas Mak Pik</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="../assets/css/login.css">
+    <link rel="stylesheet" href="../assets/css/register.css">
 </head>
 <body>
     <div class="container">
@@ -27,9 +27,13 @@
             </svg>
         </div>
         <div class="form-container">
-            <h1>Login Admin</h1>
-            <p class="subtitle">Admin Warung Cilok Pedas Mak Pik</p>
+            <h1>Register Admin</h1>
+            <p class="subtitle">Daftar sebagai Admin Warung Cilok Pedas Mak Pik</p>
             <form>
+                <div class="form-group">
+                    <label for="nama">Nama Admin</label>
+                    <input type="text" id="nama" name="nama" placeholder="Masukkan nama lengkap" required>
+                </div>
                 <div class="form-group">
                     <label for="username">Username</label>
                     <input type="text" id="username" name="username" placeholder="Masukkan username" required>
@@ -38,14 +42,14 @@
                     <label for="password">Password</label>
                     <input type="password" id="password" name="password" placeholder="Masukkan password" required>
                 </div>
-                <div class="form-group checkbox">
-                    <input type="checkbox" id="remember" name="remember">
-                    <label for="remember">Ingat saya</label>
+                <div class="form-group">
+                    <label for="confirm-password">Konfirmasi Password</label>
+                    <input type="password" id="confirm-password" name="confirm_password" placeholder="Konfirmasi password" required>
                 </div>
-                <button type="submit" class="btn-login">Login</button>
+                <button type="submit" class="btn-register">Daftar</button>
             </form>
             <div class="toggle">
-                <a href="../admin/register.php">Belum punya akun? Register</a>
+                <a href="../admin/login.php">Kembali ke halaman login</a>
             </div>
         </div>
     </div>
