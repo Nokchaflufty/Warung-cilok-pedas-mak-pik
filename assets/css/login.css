@@ -1,72 +1,169 @@
-body {
-    font-family: 'Poppins', sans-serif;
-    background: linear-gradient(135deg, #ff0000 0%, #ff8000 50%, #ffff00 100%);
+* {
     margin: 0;
     padding: 0;
-    overflow-x: hidden;
+    box-sizing: border-box;
 }
 
-.login-card {
-    max-width: 400px;
+body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #c1121f, #ff6b6b);
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.container {
+    display: flex;
     width: 100%;
-    border: none;
-    border-radius: 15px;
-    background: rgba(255, 255, 255, 0.95);
-    backdrop-filter: blur(10px);
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    max-width: 900px;
+    height: 600px;
+    background: white;
+    border-radius: 20px;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
 }
 
-.form-label {
+.illustration {
+    flex: 1;
+    background: #f8f9fa;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.illustration svg {
+    width: 100%;
+    max-width: 300px;
+    height: auto;
+}
+
+.form-container {
+    flex: 1;
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.form-container h1 {
+    color: #c1121f;
+    margin-bottom: 10px;
+    text-align: center;
+    font-size: 28px;
+    font-weight: 600;
+}
+
+.subtitle {
+    text-align: center;
+    color: #666;
+    margin-bottom: 30px;
+    font-size: 14px;
+    font-weight: 400;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
     color: #333;
+    font-weight: 500;
+    font-size: 14px;
 }
 
-.form-control {
-    border-color: #ddd;
-    border-radius: 8px;
-    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+.form-group input[type="text"],
+.form-group input[type="password"] {
+    width: 100%;
+    padding: 12px 15px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    font-size: 16px;
+    font-family: 'Poppins', sans-serif;
+    transition: border-color 0.3s, box-shadow 0.3s;
 }
 
-.form-control:focus {
-    border-color: #ff8000;
-    box-shadow: 0 0 5px rgba(255, 128, 0, 0.5);
+.form-group input:focus {
+    outline: none;
+    border-color: #c1121f;
+    box-shadow: 0 0 0 3px rgba(193, 18, 31, 0.1);
 }
 
-.btn-primary {
-    background: linear-gradient(45deg, #ff0000, #ff8000);
+.checkbox {
+    display: flex;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+.checkbox input[type="checkbox"] {
+    margin-right: 10px;
+    accent-color: #c1121f;
+}
+
+.checkbox label {
+    font-size: 14px;
+    color: #666;
+    cursor: pointer;
+}
+
+.btn-login {
+    width: 100%;
+    padding: 12px;
+    background: #c1121f;
+    color: white;
     border: none;
-    border-radius: 8px;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border-radius: 10px;
+    font-size: 16px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background 0.3s, transform 0.2s;
 }
 
-.btn-primary:hover {
-    background: linear-gradient(45deg, #ff8000, #ffff00);
+.btn-login:hover {
+    background: #a0101a;
     transform: translateY(-2px);
-    box-shadow: 0 5px 15px rgba(255, 128, 0, 0.4);
 }
 
-.btn-secondary {
-    background: linear-gradient(45deg, #ffff00, #ff8000);
-    border: none;
-    border-radius: 8px;
-    color: #333;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+.btn-login:active {
+    transform: translateY(0);
 }
 
-.btn-secondary:hover {
-    background: linear-gradient(45deg, #ff8000, #ff0000);
-    transform: translateY(-2px);
-    box-shadow: 0 5px 15px rgba(255, 128, 0, 0.4);
+.toggle {
+    text-align: center;
+    margin-top: 20px;
 }
 
-.card-title {
-    color: #ff0000;
+.toggle a {
+    color: #c1121f;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 14px;
 }
 
-@media (max-width: 576px) {
-    .login-card {
-        margin: 1rem;
+.toggle a:hover {
+    text-decoration: underline;
+}
+
+
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        height: auto;
+        max-width: 100%;
+        margin: 20px;
     }
-    .card-body {
-        padding: 1.5rem;
+    .illustration {
+        height: 200px;
+        padding: 15px;
+    }
+    .form-container {
+        padding: 20px;
+    }
+    .form-container h1 {
+        font-size: 24px;
     }
 }
